@@ -27,7 +27,7 @@ def return_weather_api_key() -> str:
 
         To insert your own API Key, change the return value,
         to a string containing just your API key'''
-    return 'db4fb4b0fecce16c3373a7129e0acca3'
+    return ''
 
 
 def return_news_api_key() -> str:
@@ -35,7 +35,7 @@ def return_news_api_key() -> str:
 
         To insert your own API Key, change the return value,
         to a string containing just your API key'''
-    return 'bdd6878a014a438e9d4b91c2ff057a6d'
+    return ''
 
 
 def return_weather_url() -> str:
