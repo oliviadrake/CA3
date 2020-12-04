@@ -55,7 +55,8 @@ failed a test before any of the code is run to save hassle for the user.
 Pylint: to do a linter test, run the linter.py code from within the CA3 directory
 
 # Running the code
-Firstly ensure all of these external modules have been pip installed: Flask, PyTTSx3, uk-covid19, pytest, pylint, requests
+Make sure the most recent version of python is installed.
+Firstly ensure all of these external modules have been pip installed: Flask, PyTTSx3, uk-covid19, pytest, pylint, requests.
 Ensure config file has been completely customised, all folders are in correct hierarchy as explained above, and you are
 within the 'CA3' directory in the terminal.
 Run the 'main.py' code, in a browser enter '127.0.0.1:5000/' to access alarm clock.
