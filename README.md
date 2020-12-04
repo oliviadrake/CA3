@@ -40,14 +40,14 @@ ensure these are up to date before running the code.
 Also stored in the config file is the filepath for the log file.
 
 The HTML template is accessed in the code through the config file, make sure the name of the HTML file name
-is correct in the config file. Also ensure the HTML file is stored in the 'CA3' folder in the 'templates' folder.
+is correct in the config file. Also ensure the HTML file is stored in the 'CA3' folder (or CA3-main if downloaded from github) in the 'templates' folder.
 (/CA3/templates/'your_html_file'.html)
 
 Your local location should be stored in the config file, update the function with your city name before running.
 
 # Testing
 To run each test in the 'tests' folder, use pytest:
-From within the CA3 directory run the command 'python -m pytest'
+From within the CA3 directory (or CA3-main if downloaded from github) run the command 'python -m pytest'
 
 When the main code is run, a testing function will run and show an error to show a function
 failed a test before any of the code is run to save hassle for the user.
@@ -58,5 +58,5 @@ Pylint: to do a linter test, run the linter.py code from within the CA3 director
 Make sure the most recent version of python is installed.
 Firstly ensure all of these external modules have been pip installed: Flask, PyTTSx3, uk-covid19, pytest, pylint, requests.
 Ensure config file has been completely customised, all folders are in correct hierarchy as explained above, and you are
-within the 'CA3' directory in the terminal.
+within the 'CA3' directory in the terminal (or CA3-main if downloaded from github).
 Run the 'main.py' code, in a browser enter '127.0.0.1:5000/' to access alarm clock.
