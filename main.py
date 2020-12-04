@@ -84,9 +84,9 @@ def runhtml() -> None:
     # show newly updated info in a daily briefing
     show_daily_briefing()
 
-    # schedule daily briefing every day for a year
+    # schedule daily briefing every day for a week
     twenty_four_hours = (24*60)
-    for each_day in range(0, 365):
+    for each_day in range(0, 7):
         s.enter(twenty_four_hours, 1, show_daily_briefing)
         twenty_four_hours = twenty_four_hours * (each_day + 1)
 
