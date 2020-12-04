@@ -26,7 +26,7 @@ app = Flask(__name__)
 s = sched.scheduler(time.time, time.sleep)
 engine = pyttsx3.init()
 
-html_file = config_file.return_html_filename()
+HTML_FILE = config_file.return_html_filename()
 
 # set blank lists to be populated with values
 notifications = []
@@ -84,15 +84,15 @@ def runhtml() -> None:
     # show newly updated info in a daily briefing
     show_daily_briefing()
 
-    # schedule daily briefing every day
+    # schedule daily briefing every day for a year
     twenty_four_hours = (24*60)
     for each_day in range(0, 365):
         s.enter(twenty_four_hours, 1, show_daily_briefing)
-        twenty_four_hours = twenty_four_hours + (24*60)
+        twenty_four_hours = twenty_four_hours * (each_day + 1)
 
     logging.info("Daily Briefing Shown")
 
-    return render_template(html_file, alarms=alarms,
+    return render_template(HTML_FILE, alarms=alarms,
                            title='COVID Smart Alarm Clock',
                            notifications=notifications, image='clocks.jpg')
 
@@ -112,7 +112,7 @@ def add_to_scheduler() -> None:
         alarm_time = request.args.get("alarm")
     except:
         alarm_time = None
-        logging.error('No Alarm Time able to extract from URL')
+        logging.info('No Alarm Time able to extract from URL')
     try:  # get the label of the alarm
         label = request.args.get("two")
     except:
@@ -169,7 +169,7 @@ def add_to_scheduler() -> None:
                     pass
         logging.info("Alarm Deleted")
 
-    return render_template(html_file, alarms=alarms,
+    return render_template(HTML_FILE, alarms=alarms,
                            title='COVID Smart Alarm Clock',
                            notifications=notifications, image='clocks.jpg')
 
